@@ -17,6 +17,11 @@ view: superstore_orders {
         END;;
   }
 
+  dimension: franchise_family {
+    type: string
+    sql: ${franchise} || '-' || ${family} ;;
+  }
+
   dimension: city {
     type: string
     sql: ${TABLE}.City ;;
